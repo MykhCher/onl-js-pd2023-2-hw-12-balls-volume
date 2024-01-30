@@ -1,11 +1,12 @@
 'use strict'
 
-const PI = Math.PI;
 let result = 0;
+let diameter = 0.5;
+let thickness = 0.01;
 
 for (let n = 1; n!==13; n++) {
-    let diameter = 0.5 + 0.01 * 2 * (n-1);
-    let currentBallVolume = 4/3 * PI * (diameter/2)**3
+    let currentDiameter = diameter + thickness * n;
+    let currentBallVolume = Math.PI * currentDiameter**3 / 6
     result += currentBallVolume;
 }
 
